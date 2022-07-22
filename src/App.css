@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --firsst-color: rgb(56, 56, 56);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  padding: 0 20%;
+}
+
+@media screen and (max-width: 1200px) {
+  .App {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .App {
+    padding: 0 5%;
+  }
+  
+}
+
+/* Popular && Veggie recipes */
+
+h1 {
+  color: var(--firsst-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.popular-recipes {
+  margin: 2rem 0;
+}
+
+.popular-recipes-card {
+  min-width: 100%;
+  min-height: 15rem;
+  position: relative;
+}
+.popular-recipes-card::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.recipe-title {
+  height: 50px;
+  position: absolute;
+  bottom: 20%;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  z-index: 3;
+  color: #fff;
+}
+
+.popular-recipes img {
+  width: 100%;
+  height: 15rem;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Category List */
+
+.category-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.category-cicle {
+  text-decoration: none;
+  height: 65px;
+  width: 65px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background-color: var(--firsst-color);
+}
+.category-cicle.active {
+  background: linear-gradient(to right, #f27121, #e94057);
+}
+.category-title {
+  font-size: 10px;
+}
+
+/* Grid (cusine) */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-gap: 2rem;
+  padding: 2rem 0;
+}
+
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-img {
+  width: 100%;
+  border-radius: 20px;
+}
+.grid-title {
+  text-align: center;
+  height: 50px;
+  text-decoration: none;
+}
+
+.grid a:-webkit-any-link {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Search Input */
+
+.search {
+  background-color: var(--firsst-color);
+  border-radius: 20px;
+  width: 60%;
+  height: 40px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  margin-top: 0;
+
+}
+
+.search-icon {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.search input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 7px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  margin-top: 1rem;
+}
+.logo-title {
+  font-family: "Lobster Two", cursive;
+  color: var(--firsst-color);
+
+}
+
+.logo-icon{
+  color: var(--firsst-color);
+  font-size: 1.6rem;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+
+/* recipe-details */
+
+.recipe-details {
+  display: flex;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 720px) {
+  .recipe-details {
+    flex-direction: column;
+  }
+
+  .recipe-right-card {
+     margin-top: 2rem;
+  }
+  .recipe-left-card img {
+    min-width: 100%;
+  }
+}
+
+.recipe-left-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.recipe-left-card img {
+  max-width: 350px;
+  height: auto;
+}
+.recipe-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.recipe-buttons button {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 7px 18px;
+  margin-right: 2rem;
+  background-color: transparent;
+  border: var(--firsst-color) 3px solid;
+}
+.recipe-buttons .active {
+  background-color: var(--firsst-color);
+  color: #fff;
+}
+
+.recipe-details h3,
+.recipe-instructions a:-webkit-any-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
